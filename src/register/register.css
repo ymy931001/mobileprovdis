@@ -1,0 +1,207 @@
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+
+}
+
+#root{
+    height: 100%;
+    width: 100%;
+}
+
+#register{
+    padding-bottom: 1.2rem;
+    padding-top: .2rem;
+    /* background: url(../images/back.png) no-repeat center center; */
+    background: url("http://disimg.terabits.cn/back.png") no-repeat center center;
+    background-size: cover;
+    min-height: 100%;
+    width: 100%;
+
+}
+
+#register .am-list-item{
+    background: none;
+}
+
+#register  .am-list{
+    background: none;
+} 
+
+#register   .picker-list{
+    background: none;
+}
+
+#register .am-list-body{
+    background: none;
+}
+
+#register .am-list-item .am-list-line .am-list-extra{
+    flex-basis: 50%;
+}
+
+
+#register  .am-list-item .am-list-line .am-list-extra{
+    color:#BFBFBF;
+    font-size: .14rem;
+}
+
+#register .am-list-item .am-list-line .am-list-content{
+    color:#BFBFBF;
+    font-size: .15rem;
+}
+
+/* #register .am-wingblank.am-wingblank-lg{
+    margin: 0;
+}
+#register .am-image-picker-list{
+    padding: 0;
+ 
+}
+
+#register .am-flexbox-item{
+    margin: 0;
+}
+
+#register  .am-flexbox-item{
+    height: 1rem;
+}
+
+#register .am-image-picker-upload-btn{
+    background: none;
+}
+
+#register .am-image-picker-list .am-image-picker-upload-btn:before, .am-image-picker-list .am-image-picker-upload-btn:after{
+    top:30%;
+} */
+
+
+#register .ant-upload-picture-card-wrapper{
+    width: 100%;
+}
+
+#register .ant-upload.ant-upload-select-picture-card{
+    width: 100%;
+    background: none;
+}
+
+#register .ant-upload.ant-upload-select-picture-card > .ant-upload{
+    color:#999;
+}
+
+#register .dingwei{
+    position: absolute;
+    color:#999;
+    bottom: 18%;
+    left: 30%;
+}
+
+#register .title{
+    font-size: .24rem;
+    color:white;
+    margin-bottom: .2rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+#register .line{
+    width: 80%;
+    margin:0 auto;
+    margin-bottom: .2rem;
+}
+
+#register .lines{
+    width: 80%;
+    margin:0 auto;
+    margin-bottom: .2rem;
+}
+
+#register .loginphone{
+    width: 100%;
+    background: none;
+    outline: none;
+    color:white;
+    height: .4rem;
+}
+
+/**图片**/
+
+#register .am-image-picker-list .am-image-picker-upload-btn{
+    background: none;
+    border: 1px solid #d9d9d9;
+    height: 1.5rem;
+}
+
+#register .am-image-picker-list .am-flexbox .am-flexbox-item{
+    height: 1.5rem;
+}
+
+#register .am-image-picker-list{
+    padding: 0;
+}
+
+
+#register  .ant-input:hover{
+    border-color:white;
+}
+
+#register .loginbtn{
+    width: 100%;
+    height: .4rem;
+    font-size: .15rem;
+}
+
+#register .backbtn{
+    width: 100%;
+    height: .4rem;
+    font-size: .15rem;
+    background: #999;
+    color:white;
+    border:1px solid #999;
+}
+
+
+#register  .footer{
+    text-align: center;
+    width: 100%;
+    color:white;
+    /* position: fixed;
+    bottom: .2rem; */
+    margin-top: 0.25rem;
+    font-size: .11rem;
+}
+
+#register  .zhuce{
+    color:white;
+    text-align: right;
+    width: 80%;
+    margin: 0 auto;
+}
+
+
+#register .ant-input-group{
+    margin: 0;
+}
+
+#register .ant-input{
+    background: none;
+    color:white;
+}
+
+#register .ant-input-search-button{
+    background: #2d436a;
+    border:1px solid white;
+    color:white;
+}
+
+#register .ant-input:focus{
+    border-color:white;
+}

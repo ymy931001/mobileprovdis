@@ -1,0 +1,148 @@
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+
+}
+
+.houseinfo{
+    padding-left: .13rem;
+    padding-right: .13rem;
+    padding-bottom: .45rem;
+}
+
+#houseinfo  .footer{
+    text-align: center;
+    width: 100%;
+    color:#999;
+    position: fixed;
+    bottom: .2rem;
+    font-size: .11rem;
+}
+
+
+#houseinfo .header{
+    width: 100%;
+    background: white;
+    min-height: 1rem;
+    border-radius: 5px;
+    /* margin-top: .15rem; */
+}
+
+#houseinfo .headertitle{
+    height: .45rem;
+    border-bottom: 1px solid #eaeaea;
+    font-size: .17rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: .1rem;
+}
+
+#houseinfo .am-list-item .am-input-label.am-input-label-5{
+    width: 1.5rem;
+}
+
+#houseinfo .am-list-item .am-list-line .am-list-content{
+    font-size: .15rem;
+}
+
+#houseinfo .am-list-item .am-list-line .am-list-extra{
+    flex-basis: 50%;
+    color:#BFBFBF;
+    font-size: .15rem;
+}
+
+
+#houseinfo .ant-upload-picture-card-wrapper{
+    width: 50%;
+}
+
+#houseinfo .ant-upload.ant-upload-select-picture-card{
+    width: 100%;
+    background: none;
+    height: .39rem;
+    margin-bottom: 0;
+}
+
+#houseinfo .ant-upload.ant-upload-select-picture-card > .ant-upload{
+    color:#999;
+}
+
+#houseinfo .am-list-body::before{
+    position: initial;
+    background-color: white;
+}
+
+#houseinfo .am-list-body::after{
+    position: initial;
+    background-color: white;
+}
+
+#houseinfo .line{
+    margin-top: .1rem;
+    margin-bottom: 0.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#houseinfo .am-list-item{
+    padding-left: 0;
+}
+
+#houseinfo .loginbtn{
+    width: 100%;
+    height: .4rem;
+    font-size: .15rem;
+}
+
+
+
+
+
+#houseinfo .footer{
+    width: 100%;
+    margin:0 auto;
+    font-size: .1rem;
+    color:white;
+    background: #3098f0;
+    position: fixed;
+    bottom: 0;
+    z-index: 99;
+}
+#houseinfo .foot{
+display: flex;
+height: .35rem;
+justify-content: center;
+align-items: center;
+width: 100%;
+}
+#houseinfo .foot img{
+    width: .2rem;
+    margin-left: .05rem;
+    margin-right: .05rem;
+}
+
+
+
+
+#houseinfo .am-list-item .am-input-label{
+    font-size: .15rem;
+}
+
+#houseinfo .am-list-item .am-input-control input{
+    font-size: .15rem;
+}
+
+#houseinfo .borderimg{
+    width: .04rem;
+    margin-right: .05rem;
+}

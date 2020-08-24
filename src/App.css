@@ -1,0 +1,158 @@
+
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.ant-layout-header{
+  background: url(http://maoyang.terabits.cn/headers.png) no-repeat  !important;
+  /* background: #1C2B36; */
+  background-size:cover !important;
+  color:#fff !important;
+  padding: 0;
+}
+
+
+.ant-layout-sider{
+  background: #F5F5F5;
+}
+
+.ant-menu-dark{
+  background: #F5F5F5;
+  color:#555;
+}
+
+.ant-layout-sider-children{
+  background: #727980 url(http://maoyang.terabits.cn/sidebar.png) no-repeat ;
+  /* background: #1C2B36; */
+  /* background-size: contain  !important; */
+}
+
+.ant-menu.ant-menu-dark .ant-menu-item-selected, .ant-menu-submenu-popup.ant-menu-dark .ant-menu-item-selected{
+background: url(http://maoyang.terabits.cn/select.png) no-repeat;
+color:white;
+}
+
+.ant-menu-dark .ant-menu-item-selected > a, .ant-menu-dark .ant-menu-item-selected > a:hover{
+  color: #333;
+}
+
+.ant-menu-dark .ant-menu-item-selected span{
+  color: #333;
+}
+
+
+
+
+.ant-menu-dark.ant-menu-inline, .ant-menu-dark.ant-menu-vertical, .ant-menu-dark.ant-menu-vertical-left, .ant-menu-dark.ant-menu-vertical-right{
+  background: url(http://maoyang.terabits.cn/sidebar.png) no-repeat;
+}
+
+.ant-menu-dark .ant-menu-inline.ant-menu-sub{
+  box-shadow: none;
+  background: url(http://maoyang.terabits.cn/sidebar.png) no-repeat;
+}
+
+.ant-menu-dark .ant-menu-item-selected span{
+  color:white;
+}
+
+.ant-menu-item:active, .ant-menu-submenu-title:active{
+  background: transparent;
+}
+
+.ant-menu-inline > .ant-menu-item{
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* .ant-menu-dark.ant-menu-inline .ant-menu-item, .ant-menu-dark.ant-menu-inline .ant-menu-submenu-title{
+  border-bottom: 1px solid #DEDEDE;
+} */
+.ant-menu-item .anticon + span, .ant-menu-submenu-title .anticon + span{
+  color:#fff
+}
+
+.ant-menu-item .anticon, .ant-menu-submenu-title .anticon{
+  color:#fff;
+}
+
+.anticon .anticon-dashboard{
+  color: #fff
+}
+
+.ant-menu-dark .ant-menu-item-selected .anticon{
+  color:#fff
+}
+
+
+
+/* .ant-menu-dark .ant-menu-item:hover{
+  background: url(http://maoyang.terabits.cn/sidebar.png) no-repeat;
+}
+
+.ant-menu-dark .ant-menu-item-selecte:hover{
+  background: url(http://maoyang.terabits.cn/select.png) no-repeat;
+} */
+
+.ant-layout-content{
+  margin:0 !important;
+  padding: 10px;
+}
+
+/* .ant-card-bordered{
+  min-height: 90vh;
+  box-shadow: 1px 1px 5px 1px #999;
+} */
+
+.ant-card-head{
+  position: relative;
+}
+/* .ant-card-head::before{
+  position: absolute;
+    top: -1px;
+    left: -1px;
+    border-width: 0 42px 42px 0;
+    border-style: solid;
+    border-color: #fff #29406C;
+    -webkit-box-shadow: 0 0 0 rgba(0,0,0,.4), 0 0 10px rgba(0,0,0,.3);
+    -moz-box-shadow: 0 0 0 rgba(0,0,0,.4),0 0 10px rgba(0,0,0,.3);
+    box-shadow: 0 0 0 rgba(0,0,0,.4), 0 0 10px rgba(0,0,0,.3);
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+} */
+/* .ant-card-head-title{
+  padding: 15px 30px;
+} */
+.App-title {
+  font-size: 1.5em;
+}
+
+aside{
+  max-width: 180px !important;
+  min-width: 180px !important;
+  width: 180px !important;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}

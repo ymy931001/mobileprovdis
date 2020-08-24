@@ -1,0 +1,130 @@
+
+.explainroom{
+    background: #f5f5f5 url(../images/header.png) no-repeat;
+    background-size: 100%;
+    padding-top: .6rem;
+    padding-left: .13rem;
+    padding-right: .13rem;
+    min-height: 7rem;
+    padding-bottom: .35rem;
+}
+
+#explainroom .head{
+    width: 100%;
+    padding-left: .1rem;
+    color:white;
+    font-size: .12rem;
+    line-height: .25rem;
+}
+
+#explainroom .header{
+    width: 100%;
+    background: white;
+    min-height: 1rem;
+    border-radius: 5px;
+    margin-top: .15rem;
+}
+
+#explainroom .footer{
+    width: 100%;
+    margin:0 auto;
+    font-size: .1rem;
+    color:white;
+    background: #3098f0;
+    position: fixed;
+    bottom: 0;
+    z-index: 99;
+}
+#explainroom .foot{
+display: flex;
+height: .35rem;
+justify-content: center;
+align-items: center;
+width: 100%;
+}
+#explainroom .foot img{
+    width: .2rem;
+    margin-left: .05rem;
+    margin-right: .05rem;
+}
+
+
+#explainroom .headertitle{
+    height: .45rem;
+    border-bottom: 1px solid #eaeaea;
+    font-size: .17rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: .1rem;
+    padding-left: .14rem;
+}
+
+
+#explainroom .borderimg{
+    width: .04rem;
+    margin-right: .05rem;
+}
+
+#explainroom .more{
+    font-size: .14rem;
+    color:#2374ee;
+}
+
+#explainroom .contentline{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: .35rem;
+    line-height: .35rem;
+}
+
+#explainroom .content{
+    padding-right: .1rem;
+    padding-left: .14rem;
+    font-size: .15rem;
+}
+
+#explainroom .ant-table-thead > tr > th{
+    padding: .05rem;
+}
+
+#explainroom  .ant-table-tbody > tr > td{
+    padding: .05rem;
+    padding-top: .1rem;
+    padding-bottom: .1rem;
+}
+
+
+#explainroom .lefttitle{
+    color:#999999;
+    font-size: .15rem;
+    display: flex;
+    align-items: center;
+}
+
+#explainroom .lefttitle img{
+    width: .15rem;
+    margin-right: .05rem;
+}
+
+
+#explainroom .list{
+    margin-top: .1rem;
+}
+
+#explainroom .contmid{
+    font-size: .12rem;
+}
+
+#explainroom .contlefttext{
+    margin-left: .05rem;
+    margin-right: .05rem;
+    color:#2374ee;
+}
+
+#explainroom .explainbtn{
+    width: 100%;
+    margin-top: .2rem;
+}

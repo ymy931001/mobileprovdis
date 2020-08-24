@@ -1,0 +1,263 @@
+
+.mobileuser{
+    background: #f5f5f5 url(../images/header.png) no-repeat;
+    background-size: 100%;
+    padding-top: .6rem;
+    padding-left: .13rem;
+    padding-right: .13rem;
+    padding-bottom: .35rem;
+    min-height: 7rem;
+}
+
+#mobileuser .head{
+    width: 100%;
+    padding-left: .1rem;
+    color:white;
+    font-size: .12rem;
+    line-height: .25rem;
+}
+
+#mobileuser .header{
+    width: 100%;
+    background: white;
+    min-height: .5rem;
+    border-radius: 5px;
+    margin-top: .15rem;
+}
+
+
+#mobileuser .footer{
+    width: 100%;
+    margin:0 auto;
+    font-size: .1rem;
+    color:white;
+    background: #3098f0;
+    position: fixed;
+    bottom: 0;
+    z-index: 99;
+}
+#mobileuser .foot{
+display: flex;
+height: .35rem;
+justify-content: center;
+align-items: center;
+width: 100%;
+}
+#mobileuser .foot img{
+    width: .2rem;
+    margin-left: .05rem;
+    margin-right: .05rem;
+}
+
+
+#mobileuser .headertitle{
+    height: .45rem;
+    border-bottom: 1px solid #eaeaea;
+    font-size: .17rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: .1rem;
+    padding-left: .14rem;
+}
+
+
+#mobileuser .borderimg{
+    width: .05rem;
+    margin-right: .05rem;
+}
+
+#mobileuser .more{
+    font-size: .14rem;
+    color:#2374ee;
+}
+
+#mobileuser .contentline{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: .35rem;
+    line-height: .35rem;
+}
+
+#mobileuser .content{
+    padding-right: .1rem;
+    padding-left: .14rem;
+    font-size: .15rem;
+}
+
+
+#mobileuser .lefttitle{
+    color:#999999;
+    font-size: .15rem;
+    display: flex;
+    align-items: center;
+}
+
+#mobileuser .lefttitle img{
+    width: 20%;
+    margin-right: .05rem;
+}
+
+#mobileuser .lefttitles{
+    color:#999999;
+    font-size: .15rem;
+    display: flex;
+    align-items: center;
+}
+
+#mobileuser .lefttitles img{
+    width: 15%;
+    margin-right: .05rem;
+}
+
+#mobileuser .list{
+    margin-top: .1rem;
+}
+
+#mobileuser .contmid{
+    font-size: .12rem;
+}
+
+#mobileuser .contlefttext{
+    margin-left: .05rem;
+    margin-right: .05rem;
+    color:#2374ee;
+}
+/* 
+
+#mobileuser .text{
+    margin-left: .25rem;
+    color: white;
+    font-size:.3rem;
+}
+#mobileuser .nav{
+    width: 90%;
+    margin:0 auto;
+    height: 1rem;
+    background: white;
+    border-radius: 10px;
+    margin-top:.25rem;
+    box-shadow:  3px 3px 5px #888888;
+    display: flex;
+    align-items: center;
+}
+#mobileuser  .am-list-item .am-list-line .am-list-content{
+    font-size: 15px;
+}
+#mobileuser  .navbar{
+    width: 33%;
+    float: left;
+    height: .4rem;
+    text-align: center;
+    font-size: .22rem;
+    font-family: '微软雅黑';
+    border-right:2px solid #3098f0;
+}
+#mobileuser  .navbar img{
+    margin-top: -.2rem;
+    margin-bottom: .1rem;
+}
+#mobileuser  .navbar span{
+    margin-top: -.15rem;
+}
+#mobileuser  .content{
+    width: 90%;
+    margin: 0 auto;
+}
+#mobileuser .contenthead{
+    padding-bottom: .1rem;
+    border-bottom: 2px solid #f7f7f7;
+    font-size: .25rem;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+}
+#mobileuser .list li{
+    list-style: none;
+}
+#mobileuser .list li span{
+    color:#999;
+}
+#mobileuser .list{
+    font-size: .22rem;
+    line-height: .5rem;
+    margin-top: .1rem;
+    padding-bottom: .1rem;
+}
+#mobileuser .dash{
+    width: 100%;
+    height:.2rem;
+    background: #f7f7f7;
+}
+#mobileuser .footer{
+    width: 100%;
+    margin:0 auto;
+    font-size: .2rem;
+    color:white;
+    background: #3098f0;
+    position: fixed;
+    bottom: 0;
+    z-index: 99;
+}
+#mobileuser .foot{
+display: flex;
+height: .55rem;
+justify-content: center;
+align-items: center;
+width: 100%;
+}
+
+
+#mobileuser .ant-table-thead > tr > th{
+    padding: .1rem;
+}
+
+#mobileuser  .ant-table-tbody > tr > td{
+    padding: .15rem;
+}
+
+#mobileuser .footimg{
+    width: 4%;
+    vertical-align: middle;
+    margin-left: .1rem;
+    margin-right: .1rem;
+    }
+
+    @media screen and (max-width: 348px) {
+        #mobileuser .footer{
+            width: 100%;
+        }
+        #mobileuser .foot{
+            height: .5rem;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+        #mobileuser .footimg{
+            margin-left: .1rem;
+            margin-right: .1rem;
+        }
+        #mobileuser .shu{
+            display: none;
+         }
+    }
+    @media screen and (min-height: 800px) {
+        #mobileuser .head{
+            height: 2.4rem;
+        }
+        #mobileuser .nav{
+            height: 1.2rem;
+        }
+        #mobileuser .list {
+            font-size: .25rem;
+            line-height: .6rem;
+        }
+        #mobileuser .footer{
+            font-size: .22rem;
+        }
+        #mobileuser .foot{
+            height: .6rem;
+            }
+    } */

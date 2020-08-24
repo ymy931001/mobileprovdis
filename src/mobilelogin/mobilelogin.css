@@ -1,0 +1,105 @@
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+
+}
+
+#root{
+    height: 100%;
+    width: 100%;
+}
+
+#mobilelogin{
+    padding-bottom: 1.2rem;
+    padding-top: .8rem;
+    background: url("http://disimg.terabits.cn/back.png") no-repeat center center;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+
+}
+
+
+#mobilelogin .title{
+    font-size: .24rem;
+    color:white;
+    margin-bottom: .5rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+#mobilelogin .line{
+    width: 80%;
+    margin:0 auto;
+    margin-bottom: .3rem;
+}
+
+#mobilelogin .lines{
+    width: 80%;
+    margin:0 auto;
+    margin-top: .3rem;
+}
+
+#mobilelogin .loginphone{
+    width: 100%;
+    background: none;
+    outline: none;
+    color:white;
+    height: .4rem;
+}
+
+#mobilelogin  .ant-input:hover{
+    border-color:white;
+}
+
+#mobilelogin .loginbtn{
+    width: 100%;
+    height: .4rem;
+    font-size: .15rem;
+
+}
+
+#mobilelogin  .footer{
+    text-align: center;
+    width: 100%;
+    color:white;
+    /* position: fixed; */
+    /* bottom: .4rem; */
+    margin-top: 1rem;
+    font-size: .11rem;
+}
+
+#mobilelogin  .zhuce{
+    color:white;
+    text-align: right;
+    width: 80%;
+    margin: 0 auto;
+}
+
+
+#mobilelogin .ant-input-group{
+    margin: 0;
+}
+
+#mobilelogin .ant-input{
+    background: none;
+    color:white;
+}
+
+#mobilelogin .ant-input-search-button{
+    background: #2d436a;
+    border:1px solid white;
+    color:white;
+}
+
+#mobilelogin .ant-input:focus{
+    border-color:white;
+}

@@ -1,0 +1,160 @@
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+
+}
+
+.cleanerinfo{
+    padding-left: .13rem;
+    padding-right: .13rem;
+    padding-bottom: .45rem;
+}
+
+#cleanerinfo  .jiankang{
+    margin-top: .1rem;
+    font-size: .12rem;
+}
+
+#cleanerinfo  .footer{
+    text-align: center;
+    width: 100%;
+    color:#999;
+    position: fixed;
+    bottom: .2rem;
+    font-size: .11rem;
+}
+
+
+#cleanerinfo .header{
+    width: 100%;
+    background: white;
+    min-height: 1rem;
+    border-radius: 5px;
+}
+
+#cleanerinfo .headertitle{
+    height: .45rem;
+    border-bottom: 1px solid #eaeaea;
+    font-size: .17rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: .1rem;
+}
+
+#cleanerinfo .am-list-item .am-input-label.am-input-label-5{
+    width: .9rem;
+    padding-left: .1rem;
+}
+
+#cleanerinfo .am-list-item .am-list-line .am-list-content{
+    font-size: .15rem;
+    padding-left: 0.1rem;
+}
+
+#cleanerinfo .am-list-item .am-list-line .am-list-extra{
+    flex-basis: 50%;
+    color:#BFBFBF;
+    font-size: .15rem;
+}
+
+
+#cleanerinfo .ant-upload-picture-card-wrapper{
+    width: 100%;
+}
+
+#cleanerinfo .ant-upload.ant-upload-select-picture-card{
+    width: 100%;
+    background: #f5f5f5;
+    height: 1.8rem;
+}
+
+#cleanerinfo .ant-upload.ant-upload-select-picture-card > .ant-upload{
+    color:#999;
+}
+
+
+#cleanerinfo  .backbtn{
+    color:#999999;
+    width: 100%;
+    background: white;
+    border:1px solid #999;
+    height: .4rem;
+    margin-top: .2rem;
+}
+
+#cleanerinfo .am-list-item{
+    padding-left: 0;
+}
+
+
+#cleanerinfo  .sexline{
+    height: .44rem;
+    line-height: .44rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+#cleanerinfo  .sexspan{
+    width: .96rem;
+    display: inline-block;
+    padding-left: .1rem;
+}
+
+#cleanerinfo .loginbtn{
+    width: 100%;
+    height: .4rem;
+    font-size: .15rem;
+    margin-top: .2rem;
+}
+
+
+
+
+
+#cleanerinfo .footer{
+    width: 100%;
+    margin:0 auto;
+    font-size: .1rem;
+    color:white;
+    background: #3098f0;
+    position: fixed;
+    bottom: 0;
+    z-index: 99;
+}
+#cleanerinfo .foot{
+display: flex;
+height: .35rem;
+justify-content: center;
+align-items: center;
+width: 100%;
+}
+#cleanerinfo .foot img{
+    width: .2rem;
+    margin-left: .05rem;
+    margin-right: .05rem;
+}
+
+
+
+
+#cleanerinfo .am-list-item .am-input-label{
+    font-size: .15rem;
+}
+
+#cleanerinfo .am-list-item .am-input-control input{
+    font-size: .15rem;
+}
+
+#cleanerinfo .borderimg{
+    width: .04rem;
+    margin-right: .05rem;
+}

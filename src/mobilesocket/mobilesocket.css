@@ -1,0 +1,157 @@
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+
+}
+
+.mobilesocket{
+    padding-left: .13rem;
+    padding-right: .13rem;
+    padding-bottom: .45rem;
+}
+
+#mobilesocket  .footer{
+    text-align: center;
+    width: 100%;
+    color:#999;
+    position: fixed;
+    bottom: .2rem;
+    font-size: .11rem;
+}
+
+#mobilesocket .am-list-item .am-list-line .am-list-extra{
+    flex-basis: 50%;
+}
+
+ .socketline{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: .25rem;
+    line-height: .25rem;
+    font-size: .14rem;
+}
+
+#mobilesocket   .am-list-body{
+    border-top:none !important;
+    margin-top: .1rem;
+    position: initial;
+}
+
+#mobilesocket .header{
+    width: 100%;
+    background: white;
+    min-height: 1rem;
+    border-radius: 5px;
+}
+
+#mobilesocket .headertitle{
+    height: .45rem;
+    border-bottom: 1px solid #eaeaea;
+    font-size: .17rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: .1rem;
+}
+
+
+#mobilesocket .am-list-item{
+    padding-left: 0;
+}
+
+#mobilesocket .loginbtn{
+    width: 100%;
+    height: .4rem;
+    font-size: .15rem;
+}
+
+#mobilesocket  .cupheader{
+    text-align: center;
+    margin-top: .2rem;
+    margin-bottom: .2rem;
+}
+
+#mobilesocket .footer{
+    width: 100%;
+    margin:0 auto;
+    font-size: .1rem;
+    color:white;
+    background: #3098f0;
+    position: fixed;
+    bottom: 0;
+    z-index: 99;
+}
+#mobilesocket .foot{
+display: flex;
+height: .35rem;
+justify-content: center;
+align-items: center;
+width: 100%;
+}
+#mobilesocket .foot img{
+    width: .2rem;
+    margin-left: .05rem;
+    margin-right: .05rem;
+}
+
+
+
+#mobilesocket .ant-checkbox-group-item{
+    margin-right: 0;
+    width: 50%;
+    margin-bottom: .25rem;
+}
+
+#mobilesocket .borderimg{
+    width: .04rem;
+    margin-right: .05rem;
+}
+
+
+ .modelsocket{
+    text-align: center;
+}
+
+.socketimg{
+    width: .75rem;
+}
+
+.sockettitle{
+    font-size: .15rem;
+    color:#333333;
+}
+
+.socketimgs{
+    width: 100%;
+}
+
+.socketbot{
+    color:#fb7524;
+    font-size: .11rem;
+    text-align: center;
+    margin-top: .1rem;
+}
+
+.secondtitle{
+    font-size: .15rem;
+    color:#666666;
+    margin-top: .15rem;
+    margin-bottom: .15rem;
+    text-align: center;
+}
+
+.socketbtn{
+    border-top: 1px solid  #cacaca;
+    padding-top: .1rem;
+    text-align: center;
+}
+
