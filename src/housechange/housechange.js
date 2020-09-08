@@ -48,7 +48,8 @@ class App extends React.Component {
             })
         } else {
             getQRcodestatus([
-                localStorage.getItem('erweimacode')
+                localStorage.getItem('erweimacode'),
+                localStorage.getItem('authorization')
             ]).then(res => {
                 if (res.data && res.data.message === "success") {
                     if (!res.data.data.ifHasAuthority || res.data.data.ifHasAuthority === false) {

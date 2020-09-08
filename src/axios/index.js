@@ -1231,6 +1231,7 @@ export const failaudit = params =>
 export const getQRcodestatus = params =>
   http.mobileget(config.requestIp + "/QRcodeInfo/status", {
     code: params[0],
+    Authorization: params[1],
   });
 
 

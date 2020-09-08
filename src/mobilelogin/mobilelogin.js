@@ -36,7 +36,8 @@ export default class Devicedisplay extends Component {
         url = url.split('?=', 2);
         localStorage.setItem('erweimacode', url[1] === undefined ? localStorage.getItem("erweimacode") : url[1])
         getQRcodestatus([
-            url[1]
+            url[1],
+            localStorage.getItem('authorization')
         ]).then(res => {
             if (res.data && res.data.message === "success") {
                 localStorage.setItem('siteName', res.data.data.siteName)
