@@ -68,7 +68,7 @@ export default class Devicedisplay extends Component {
         this.alarmcolumns = [
             {
                 title: "位置",
-                dataIndex: "name",
+                dataIndex: "roomName",
                 // render: (text, record, index) => {
                 //     return (
                 //         <div>
@@ -182,9 +182,9 @@ export default class Devicedisplay extends Component {
     lookexplain = (text, record, index) => {
         console.log(record)
         localStorage.setItem("explainid", record.id)
-        localStorage.setItem("explaintime", record.date)
+        localStorage.setItem("explaintime", record.date.substring(0,10))
         localStorage.setItem("explainmessage", record.message)
-        localStorage.setItem("roomname", record.name)
+        localStorage.setItem("roomname", record.roomName)
     }
 
     addcup = (text, record, index) => {
