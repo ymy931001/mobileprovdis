@@ -198,7 +198,7 @@ export default class Devicedisplay extends Component {
                     </Button>
                 </div>
                 <div className="footer">
-                    监管单位：浙江省卫生监督所  &nbsp;&nbsp;&nbsp;&nbsp;   技术支持：钛比科技
+                    监管单位：浙江省卫生健康委综合监督局  &nbsp;&nbsp;&nbsp;&nbsp;   技术支持：钛比科技
                 </div>
             </div>
         )

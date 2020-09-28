@@ -216,7 +216,7 @@ export default class Devicedisplay extends Component {
                 </div>
                 <div className="footer">
                     <div className="foot">
-                        监管单位:<img src={require('../images/foot2.png')} alt="" className="footimg" />浙江省卫生监督所&nbsp;&nbsp;
+                        监管单位:<img src={require('../images/foot2.png')} alt="" className="footimg" />浙江省卫生健康委综合监督局
                         技术支持:<img src={require('../images/foot3.png')} alt="" className="footimg" />钛比科技
               </div>
                 </div>

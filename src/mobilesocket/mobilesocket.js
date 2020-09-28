@@ -381,12 +381,12 @@ class App extends React.Component {
                 </div>
                 <div className="footer">
                     <div className="foot">
-                        监管单位:<img src={require('../images/foot2.png')} alt="" className="footimg" />浙江省卫生监督所&nbsp;&nbsp;
+                        监管单位:<img src={require('../images/foot2.png')} alt="" className="footimg" />浙江省卫生健康委综合监督局
                         技术支持:<img src={require('../images/foot3.png')} alt="" className="footimg" />钛比科技
               </div>
                 </div>
                 {/* <div className="footer">
-                    监管单位：浙江省卫生监督所  &nbsp;&nbsp;&nbsp;&nbsp;   技术支持：钛比科技
+                    监管单位：浙江省卫生健康委综合监督局  &nbsp;&nbsp;&nbsp;&nbsp;   技术支持：钛比科技
                 </div> */}
                 <Modal
                     title="插座验证"
