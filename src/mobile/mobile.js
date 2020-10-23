@@ -272,7 +272,7 @@ export default class Devicedisplay extends Component {
                         if (text === 2) {
                             return (
                                 <div>
-                                    <span style={{ color: 'blue' }}>进行中</span>
+                                    <span style={{ color: 'blue' }}>未达标</span>
                                 </div>
                             )
                         }
