@@ -374,7 +374,7 @@ export default class Devicedisplay extends Component {
                                         <Stepper
                                             style={{ width: '100%', minWidth: '100px' }}
                                             showNumber
-                                            max={100}
+                                            max={1000}
                                             min={0}
                                             value={this.state.cup1}
                                             onChange={val => this.setState({
@@ -392,7 +392,7 @@ export default class Devicedisplay extends Component {
                                         <Stepper
                                             style={{ width: '100%', minWidth: '100px' }}
                                             showNumber
-                                            max={100}
+                                            max={1000}
                                             min={0}
                                             value={this.state.cup2}
                                             onChange={val => this.setState({ cup2: val })}
@@ -408,7 +408,7 @@ export default class Devicedisplay extends Component {
                                         <Stepper
                                             style={{ width: '100%', minWidth: '100px' }}
                                             showNumber
-                                            max={100}
+                                            max={1000}
                                             min={0}
                                             value={this.state.cup3}
                                             onChange={val => this.setState({ cup3: val })}
@@ -425,7 +425,7 @@ export default class Devicedisplay extends Component {
                                         <Stepper
                                             style={{ width: '100%', minWidth: '100px' }}
                                             showNumber
-                                            max={100}
+                                            max={1000}
                                             min={0}
                                             value={this.state.cup4}
                                             onChange={val => this.setState({ cup4: val })}
@@ -442,7 +442,7 @@ export default class Devicedisplay extends Component {
                                         <Stepper
                                             style={{ width: '100%', minWidth: '100px' }}
                                             showNumber
-                                            max={100}
+                                            max={1000}
                                             min={0}
                                             value={this.state.cup5}
                                             onChange={val => this.setState({
@@ -460,7 +460,7 @@ export default class Devicedisplay extends Component {
                                         <Stepper
                                             style={{ width: '100%', minWidth: '100px' }}
                                             showNumber
-                                            max={100}
+                                            max={1000}
                                             min={0}
                                             value={this.state.cup6}
                                             onChange={val => this.setState({
@@ -478,7 +478,7 @@ export default class Devicedisplay extends Component {
                                         <Stepper
                                             style={{ width: '100%', minWidth: '100px' }}
                                             showNumber
-                                            max={100}
+                                            max={1000}
                                             min={0}
                                             value={this.state.cup7}
                                             onChange={val =>
@@ -498,7 +498,7 @@ export default class Devicedisplay extends Component {
                                         <Stepper
                                             style={{ width: '100%', minWidth: '100px' }}
                                             showNumber
-                                            max={100}
+                                            max={1000}
                                             min={0}
                                             value={this.state.cup8}
                                             onChange={val => this.setState({
@@ -516,7 +516,7 @@ export default class Devicedisplay extends Component {
                                         <Stepper
                                             style={{ width: '100%', minWidth: '100px' }}
                                             showNumber
-                                            max={100}
+                                            max={1000}
                                             min={0}
                                             value={this.state.cup9}
                                             onChange={val => this.setState({
@@ -534,7 +534,7 @@ export default class Devicedisplay extends Component {
                                         <Stepper
                                             style={{ width: '100%', minWidth: '100px' }}
                                             showNumber
-                                            max={100}
+                                            max={1000}
                                             min={0}
                                             value={this.state.cup10}
                                             onChange={val => this.setState({
