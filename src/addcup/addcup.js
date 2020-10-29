@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './addcup.css';
-import { Button, Table, Modal } from "antd";
+import { Button, Table, Modal, Spin } from "antd";
 import { List, Stepper, InputItem, Toast, Picker } from 'antd-mobile';
 import { QRcodeInfofindBySite, QRcodeInfo, findCupTypeByCode, addCupRecordQRcodeInfo } from '../axios';
 import { Link } from 'react-router-dom';
@@ -38,6 +38,7 @@ export default class Devicedisplay extends Component {
             discup9: 'none',
             discup10: 'none',
             cleaneroption: "",
+            inadd: 'none',
             todaytime: moment(new Date()),
         };
 
@@ -221,6 +222,10 @@ export default class Devicedisplay extends Component {
     }
 
     addcupok = () => {
+        this.setState({
+            adding: 'none',
+            inadd: 'inline-block'
+        })
         addCupRecordQRcodeInfo([
             localStorage.getItem('erweimacode'),
             this.state.cleanerid.join(','),
@@ -231,10 +236,17 @@ export default class Devicedisplay extends Component {
                 Toast.success('添加成功');
                 this.setState({
                     cupvisible: false,
+                    adding: 'inline-block',
+                    inadd: 'none'
                 })
                 setTimeout(function () {
                     window.location.href = "/mobile";
                 }, 1000);
+            } else {
+                this.setState({
+                    adding: 'inline-block',
+                    inadd: 'none'
+                })
             }
         });
     }
@@ -591,11 +603,12 @@ export default class Devicedisplay extends Component {
                 <Modal
                     title="提交杯具"
                     visible={this.state.cupvisible}
-                    onOk={this.addcupok}
+                    // onOk={this.addcupok}
+                    footer={null}
                     width="300px"
-                    okText="确认"
+                    // okText="确认"
                     centered
-                    onCancel={this.handleCancel}
+                // onCancel={this.handleCancel}
                 >
                     <div className="cuptable">
                         <div style={{ color: 'red', marginBottom: '10px' }}>
@@ -612,6 +625,29 @@ export default class Devicedisplay extends Component {
                             columns={this.cupColumns}
                             pagination={false}
                         />
+                        <div style={{ marginTop: '10px', textAlign: 'right' }}>
+                            <Button
+                                onClick={this.handleCancel}
+                                type="default"
+                                style={{ marginRight: '10px' }}
+                            >
+                                <span>取消</span>
+                            </Button>
+                            <Button
+                                // onClick={this.handleCancel}
+                                type="default"
+                                style={{ marginRight: '10px', display: this.state.inadd }}
+                            >
+                                <span>提交中<Spin style={{ marginLeft: '4px', background: 'white' }} /></span>
+                            </Button>
+                            <Button
+                                onClick={this.addcupok}
+                                style={{ display: this.state.adding }}
+                                type="primary"
+                            >
+                                <span>提交</span>
+                            </Button>
+                        </div>
                     </div>
                 </Modal>
             </div>
