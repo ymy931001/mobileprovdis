@@ -50,14 +50,14 @@ export default class Devicedisplay extends Component {
         };
         this.nodeInfoTableColumns = [
             {
-                title: "开始时间",
+                title: "进洗消间",
                 dataIndex: "start",
                 render: (text, record, index) =>
                     <div>
                         {moment(new Date(text)).format('YYYY-MM-DD HH:mm:ss')}
                     </div>
             }, {
-                title: "结束时间",
+                title: "出洗消间",
                 dataIndex: "end",
                 render: (text, record, index) =>
                     <div>
