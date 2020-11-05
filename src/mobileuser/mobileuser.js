@@ -181,7 +181,20 @@ export default class Devicedisplay extends Component {
         console.log(value)
         if (value === null) {
             this.setState({
-                time: undefined,
+                time: moment(new Date()),
+            }, function () {
+                QRcodeInfo([
+                    localStorage.getItem('erweimacode'),
+                    moment(new Date()).format("YYYY-MM-DD"),
+                    moment(new Date()).format("YYYY-MM-DD"),
+                ]).then(res => {
+                    if (res.data && res.data.message === "success") {
+                        this.setState({
+                            worklist: res.data.data.timePairsVOS,
+                            cuplist: res.data.data.cupRecords,
+                        })
+                    }
+                })
             })
         } else {
             this.setState({
@@ -342,7 +355,7 @@ export default class Devicedisplay extends Component {
                             <div className="contmid">
                                 <span className="contlefttext" onClick={this.yesday}>前一日</span>
                                 <DatePicker onChange={this.timeonChange}
-                                    style={{ width: '120px' }}
+                                    style={{ width: '125px' }}
                                     value={this.state.time}
                                 />
                                 <span className="contlefttext" onClick={this.nextday}>后一日</span>
