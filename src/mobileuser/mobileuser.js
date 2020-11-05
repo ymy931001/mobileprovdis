@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './mobileuser.css';
-import { Table, DatePicker } from "antd";
+import { Table, DatePicker, Button } from "antd";
 import { QRcodeInfo } from '../axios';
 import { Link } from 'react-router-dom';
 import moment from 'moment';
@@ -113,14 +113,16 @@ export default class Devicedisplay extends Component {
         localStorage.setItem('cuptest', 6666)
     }
 
-    timeonChange = (value) => {
+
+    yesday = () => {
+        var arr = this.state.time
         this.setState({
-            time: moment(new Date(value)),
+            time: moment(new Date(new Date(arr).getTime() - 24 * 60 * 60 * 1000)),
         }, function () {
             QRcodeInfo([
                 localStorage.getItem('erweimacode'),
-                moment(new Date(value)).format("YYYY-MM-DD"),
-                moment(new Date(value)).format("YYYY-MM-DD"),
+                moment(new Date(this.state.time)).format("YYYY-MM-DD"),
+                moment(new Date(this.state.time)).format("YYYY-MM-DD"),
             ]).then(res => {
                 if (res.data && res.data.message === "success") {
                     this.setState({
@@ -130,6 +132,75 @@ export default class Devicedisplay extends Component {
                 }
             })
         })
+    }
+
+
+    nextday = () => {
+        var arr = this.state.time
+        this.setState({
+            time: moment(new Date(new Date(arr).getTime() + 24 * 60 * 60 * 1000)),
+        }, function () {
+            QRcodeInfo([
+                localStorage.getItem('erweimacode'),
+                moment(new Date(this.state.time)).format("YYYY-MM-DD"),
+                moment(new Date(this.state.time)).format("YYYY-MM-DD"),
+            ]).then(res => {
+                if (res.data && res.data.message === "success") {
+                    this.setState({
+                        worklist: res.data.data.timePairsVOS,
+                        cuplist: res.data.data.cupRecords,
+                    })
+                }
+            })
+        })
+    }
+
+    todaylist = () => {
+        this.setState({
+            time: moment(new Date().getTime())
+        })
+        QRcodeInfo([
+            localStorage.getItem('erweimacode'),
+            moment(new Date().getTime()).format("YYYY-MM-DD"),
+            moment(new Date().getTime()).format("YYYY-MM-DD"),
+        ]).then(res => {
+            if (res.data && res.data.message === "success") {
+                this.setState({
+                    sitename: res.data.data.site.sitename,
+                    address: res.data.data.site.address,
+                    worklist: res.data.data.timePairsVOS,
+                    cuplist: res.data.data.cupRecords,
+                }, function () {
+                    localStorage.setItem('hotelname', this.state.sitename)
+                })
+            }
+        })
+    }
+
+    timeonChange = (value) => {
+        console.log(value)
+        if (value === null) {
+            this.setState({
+                time: undefined,
+            })
+        } else {
+            this.setState({
+                time: moment(new Date(value)),
+            }, function () {
+                QRcodeInfo([
+                    localStorage.getItem('erweimacode'),
+                    moment(new Date(value)).format("YYYY-MM-DD"),
+                    moment(new Date(value)).format("YYYY-MM-DD"),
+                ]).then(res => {
+                    if (res.data && res.data.message === "success") {
+                        this.setState({
+                            worklist: res.data.data.timePairsVOS,
+                            cuplist: res.data.data.cupRecords,
+                        })
+                    }
+                })
+            })
+        }
     }
 
     render() {
@@ -264,19 +335,21 @@ export default class Devicedisplay extends Component {
                         <div className="headertitle">
                             <div>
                                 <img src={require('../images/border.png')} className="borderimg" alt="" />
-                        消毒记录
+                            消毒记录
                         </div>
+                        </div>
+                        <div className="content">
                             <div className="contmid">
+                                <span className="contlefttext" onClick={this.yesday}>前一日</span>
                                 <DatePicker onChange={this.timeonChange}
                                     style={{ width: '120px' }}
                                     value={this.state.time}
                                 />
-                                {/* <span className="contlefttext">前一日</span>
-                            - 06-02 -
-                            <span className="contlefttext">后一日</span> */}
+                                <span className="contlefttext" onClick={this.nextday}>后一日</span>
+                                <Button type="primary" onClick={this.todaylist} style={{ float: 'right' }}>
+                                    今日
+                                </Button>
                             </div>
-                        </div>
-                        <div className="content">
                             <div className="list">
                                 <Table
                                     dataSource={this.state.worklist}

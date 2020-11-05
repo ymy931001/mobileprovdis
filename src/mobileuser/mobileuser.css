@@ -118,10 +118,12 @@ width: 100%;
 
 #mobileuser .contmid{
     font-size: .12rem;
+    margin-top: 0.1rem;
+    text-align: center;
 }
 
 #mobileuser .contlefttext{
-    margin-left: .05rem;
-    margin-right: .05rem;
+    margin-left: .1rem;
+    margin-right: .1rem;
     color:#2374ee;
 }
