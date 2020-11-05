@@ -349,7 +349,10 @@ export default class Devicedisplay extends Component {
                             <div>
                                 <img src={require('../images/border.png')} className="borderimg" alt="" />
                             消毒记录
-                        </div>
+                            </div>
+                            <Button type="primary" onClick={this.todaylist} style={{ float: 'right' }}>
+                                    今日
+                                </Button>
                         </div>
                         <div className="content">
                             <div className="contmid">
@@ -359,9 +362,6 @@ export default class Devicedisplay extends Component {
                                     value={this.state.time}
                                 />
                                 <span className="contlefttext" onClick={this.nextday}>后一日</span>
-                                <Button type="primary" onClick={this.todaylist} style={{ float: 'right' }}>
-                                    今日
-                                </Button>
                             </div>
                             <div className="list">
                                 <Table
