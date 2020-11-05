@@ -1,6 +1,6 @@
 import React from 'react';
 import { List, InputItem, DatePicker, Toast } from 'antd-mobile';
-import { Radio, message, Modal, } from 'antd';
+import { Radio, Modal, } from 'antd';
 import { LoadingOutlined, PlusOutlined } from '@ant-design/icons';
 import './cleanerchange.css';
 import { Link } from 'react-router-dom';
@@ -81,7 +81,7 @@ class App extends React.Component {
                                         listnum: 0
                                     })
                                 } else {
-
+                                    window.location = "/cleanerchangeadd"
                                 }
                                 if (res.data.data.length > 1) {
                                     this.setState({
@@ -226,7 +226,7 @@ class App extends React.Component {
             moment(this.state.fadate).format('YYYY-MM-DD'),
         ]).then(res => {
             if (res.data && res.data.message === "success") {
-                message.success('修改成功')
+                Toast.success('修改成功')
                 findCleanerBySiteid([
                     localStorage.getItem('siteId')
                 ]).then(res => {
@@ -236,6 +236,8 @@ class App extends React.Component {
                         })
                     }
                 })
+            } else {
+                Toast.fail(res.data.data)
             }
         })
     }
@@ -334,7 +336,7 @@ class App extends React.Component {
                                 listnum: 0
                             })
                         } else {
-
+                            window.location = "/cleanerchangeadd"
                         }
                         if (res.data.data.length > 1) {
                             this.setState({
