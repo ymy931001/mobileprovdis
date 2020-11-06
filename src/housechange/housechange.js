@@ -77,6 +77,7 @@ class App extends React.Component {
             localStorage.getItem('roomId')
         ]).then(res => {
             if (res.data && res.data.message === "success") {
+                console.log(222)
                 if (res.data.data != undefined && res.data.data.length > 0) {  //eslint-disable-line 
                     this.setState({
                         sterilizerid: res.data.data[0].id,
@@ -98,6 +99,7 @@ class App extends React.Component {
                         })
                     }
                 } else {
+                    console.log(111)
                     window.location.href = "/housechangeadd"
                 }
             }

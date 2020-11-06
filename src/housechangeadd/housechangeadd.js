@@ -48,6 +48,11 @@ class App extends React.Component {
                         siteName: res.data.data[0].siteName,
                         roomname: res.data.data[0].roomName,
                     })
+                } else {
+                    this.setState({
+                        siteName: localStorage.getItem('siteName'),
+                        roomname: localStorage.getItem('roomname'),
+                    })
                 }
             }
         })
