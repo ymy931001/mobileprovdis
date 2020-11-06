@@ -191,7 +191,7 @@ class App extends React.Component {
                                 新增消毒柜
                             </div>
                             <Button type="primary">
-                                <Link to="/housechange">
+                                <Link to="/mobile">
                                     <span>返回</span>
                                 </Link>
                             </Button>
