@@ -170,7 +170,7 @@ class App extends React.Component {
                                 保洁员添加
                             </div>
                             <Button type="primary">
-                                <Link to="/cleanerchange">
+                                <Link to="/mobile">
                                     <span>返回</span>
                                 </Link>
                             </Button>
