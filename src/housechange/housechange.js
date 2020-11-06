@@ -97,8 +97,9 @@ class App extends React.Component {
                             sterilizerlist: res.data.data
                         })
                     }
+                } else {
+                    window.location.href = "/housechangeadd"
                 }
-
             }
         })
     }
