@@ -393,7 +393,7 @@ export default class Devicedisplay extends Component {
                                     components={components}
                                     columns={cupcolumns}
                                     // pagination={this.state.listpage}
-                                    pagination={false}
+                                    // pagination={false}
                                 />
                             </div>
                         </div>
