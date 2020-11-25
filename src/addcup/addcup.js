@@ -613,7 +613,7 @@ export default class Devicedisplay extends Component {
                     width="300px"
                     // okText="确认"
                     centered
-                // onCancel={this.handleCancel}
+                    onCancel={this.handleCancel}
                 >
                     <div className="cuptable">
                         <div style={{ color: 'red', marginBottom: '10px' }}>
