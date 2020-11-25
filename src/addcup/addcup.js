@@ -217,6 +217,8 @@ export default class Devicedisplay extends Component {
         }
         if (!this.state.checkOutCount) {
             Toast.fail('请输入退房数');
+        } else if (!this.state.cleanerid) {
+            Toast.fail('请选择保洁人员');
         } else {
             this.setState({
                 cuplists: arr,
