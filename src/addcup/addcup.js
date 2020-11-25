@@ -215,10 +215,15 @@ export default class Devicedisplay extends Component {
                 })
             }
         }
-        this.setState({
-            cuplists: arr,
-            cupvisible: true
-        })
+        if (!this.state.checkOutCount) {
+            Toast.fail('请输入退房数');
+        } else {
+            this.setState({
+                cuplists: arr,
+                cupvisible: true
+            })
+        }
+
     }
 
     addcupok = () => {
@@ -612,7 +617,7 @@ export default class Devicedisplay extends Component {
                 >
                     <div className="cuptable">
                         <div style={{ color: 'red', marginBottom: '10px' }}>
-                            *请仔细确认填写的信息，一经确认不得修改，谢谢合作！
+                            *请仔细确认填写的信息，一经确认不得修改，若存在虚假，将承担相应法律责任，谢谢合作！
                         </div>
                         <div className="cupline">
                             <span>退房数：</span> <span>{this.state.checkOutCount}</span>
