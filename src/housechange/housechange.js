@@ -254,22 +254,27 @@ class App extends React.Component {
 
     //确认登录
     yanzok = () => {
-        console.log(1111)
-        mobilelogin([
-            this.state.phone,
-            this.state.codenum,
-        ]).then(res => {
-            if (res.data && res.data.message === "success") {
-                Toast.success('验证成功');
-                this.setState({
-                    yanzvisible: false,
-                })
-                localStorage.setItem("authorization", res.headers.authorization);
-                this.alllist()
-            } else {
-                Toast.fail(res.data.data);
-            }
-        })
+        if (!this.state.phone) {
+            Toast.fail('请输入手机号');
+        } else if (!this.state.codenum) {
+            Toast.fail('请输入验证码');
+        } else {
+            mobilelogin([
+                this.state.phone,
+                this.state.codenum,
+            ]).then(res => {
+                if (res.data && res.data.message === "success") {
+                    Toast.success('验证成功');
+                    this.setState({
+                        yanzvisible: false,
+                    })
+                    localStorage.setItem("authorization", res.headers.authorization);
+                    this.alllist()
+                } else {
+                    Toast.fail(res.data.data);
+                }
+            })
+        }
     }
 
 

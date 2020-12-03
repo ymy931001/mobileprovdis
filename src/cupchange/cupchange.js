@@ -226,39 +226,48 @@ class App extends React.Component {
 
     //确认登录
     yanzok = () => {
-        console.log(1111)
-        mobilelogin([
-            this.state.phone,
-            this.state.codenum,
-        ]).then(res => {
-            if (res.data && res.data.message === "success") {
-                Toast.success('验证成功');
-                this.setState({
-                    yanzvisible: false,
-                })
-                localStorage.setItem("authorization", res.headers.authorization);
-                findCupTypeByRoomId([
-                    localStorage.getItem('roomId')
-                ]).then(res => {
-                    if (res.data && res.data.message === "success") {
-                        var arr = []
-                        for (var i in res.data.data.allCup) {
-                            arr.push({
-                                'label': res.data.data.allCup[i].name,
-                                "value": res.data.data.allCup[i].id,
+        if (!this.state.phone) {
+            Toast.fail('请输入手机号');
+        } else if (!this.state.codenum) {
+            Toast.fail('请输入验证码');
+        } else {
+            mobilelogin([
+                this.state.phone,
+                this.state.codenum,
+            ]).then(res => {
+                if (res.data && res.data.message === "success") {
+                    Toast.success('验证成功');
+                    this.setState({
+                        yanzvisible: false,
+                    })
+                    localStorage.setItem("authorization", res.headers.authorization);
+                    findCupTypeByRoomId([
+                        localStorage.getItem('roomId')
+                    ]).then(res => {
+                        if (res.data && res.data.message === "success") {
+                            var arr = []
+                            for (var i in res.data.data.allCup) {
+                                arr.push({
+                                    'label': res.data.data.allCup[i].name,
+                                    "value": res.data.data.allCup[i].id,
+                                })
+                            }
+                            this.setState({
+                                cuplist: arr,
+                                cuparr: res.data.data.roomCupIds
                             })
                         }
-                        this.setState({
-                            cuplist: arr,
-                            cuparr: res.data.data.roomCupIds
-                        })
-                    }
-                })
-            } else {
-                Toast.fail(res.data.data);
-            }
-        })
+                    })
+                } else {
+                    Toast.fail(res.data.data);
+                }
+            })
+        }
     }
+
+
+
+
 
     changecup = () => {
         modifyCupRoom([

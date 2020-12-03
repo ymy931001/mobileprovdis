@@ -308,48 +308,53 @@ class App extends React.Component {
 
     //确认登录
     yanzok = () => {
-        console.log(1111)
-        mobilelogin([
-            this.state.phone,
-            this.state.codenum,
-        ]).then(res => {
-            if (res.data && res.data.message === "success") {
-                Toast.success('验证成功');
-                this.setState({
-                    yanzvisible: false,
-                })
-                localStorage.setItem("authorization", res.headers.authorization);
-                findCleanerBySiteid([
-                    localStorage.getItem('siteId')
-                ]).then(res => {
-                    if (res.data && res.data.message === "success") {
-                        if (res.data.data.length != 0) {  //eslint-disable-line 
-                            this.setState({
-                                sex: res.data.data[0].sex,
-                                cleanername: res.data.data[0].name,
-                                certificateCode: res.data.data[0].certificatecode,
-                                cleanerphone: res.data.data[0].phone,
-                                fadate: new Date(res.data.data[0].issueDate),
-                                imageUrl: res.data.data[0].certificate,
-                                certificate: res.data.data[0].certificate,
-                                cleanerid: res.data.data[0].id,
-                                listnum: 0
-                            })
-                        } else {
-                            window.location = "/cleanerchangeadd"
+        if (!this.state.phone) {
+            Toast.fail('请输入手机号');
+        } else if (!this.state.codenum) {
+            Toast.fail('请输入验证码');
+        } else {
+            mobilelogin([
+                this.state.phone,
+                this.state.codenum,
+            ]).then(res => {
+                if (res.data && res.data.message === "success") {
+                    Toast.success('验证成功');
+                    this.setState({
+                        yanzvisible: false,
+                    })
+                    localStorage.setItem("authorization", res.headers.authorization);
+                    findCleanerBySiteid([
+                        localStorage.getItem('siteId')
+                    ]).then(res => {
+                        if (res.data && res.data.message === "success") {
+                            if (res.data.data.length != 0) {  //eslint-disable-line 
+                                this.setState({
+                                    sex: res.data.data[0].sex,
+                                    cleanername: res.data.data[0].name,
+                                    certificateCode: res.data.data[0].certificatecode,
+                                    cleanerphone: res.data.data[0].phone,
+                                    fadate: new Date(res.data.data[0].issueDate),
+                                    imageUrl: res.data.data[0].certificate,
+                                    certificate: res.data.data[0].certificate,
+                                    cleanerid: res.data.data[0].id,
+                                    listnum: 0
+                                })
+                            } else {
+                                window.location = "/cleanerchangeadd"
+                            }
+                            if (res.data.data.length > 1) {
+                                this.setState({
+                                    nextdis: 'inline-block',
+                                    clearlist: res.data.data
+                                })
+                            }
                         }
-                        if (res.data.data.length > 1) {
-                            this.setState({
-                                nextdis: 'inline-block',
-                                clearlist: res.data.data
-                            })
-                        }
-                    }
-                })
-            } else {
-                Toast.fail(res.data.data);
-            }
-        })
+                    })
+                } else {
+                    Toast.fail(res.data.data);
+                }
+            })
+        }
     }
 
 

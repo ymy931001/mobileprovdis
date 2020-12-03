@@ -187,47 +187,52 @@ export default class Devicedisplay extends Component {
 
     //确认登录
     yanzok = () => {
-        console.log(1111)
-        mobilelogin([
-            this.state.phone,
-            this.state.codenum,
-        ]).then(res => {
-            if (res.data && res.data.message === "success") {
-                Toast.success('验证成功');
-                this.setState({
-                    yanzvisible: false,
-                })
-                QRcodeInfo([
-                    localStorage.getItem('erweimacode'),
-                    localStorage.getItem('explaintime'),
-                    localStorage.getItem('explaintime'),
-                ]).then(res => {
-                    if (res.data && res.data.message === "success") {
-                        this.setState({
-                            sitename: res.data.data.site.sitename,
-                            roomname: res.data.data.room.name,
-                            cameraid: res.data.data.camera.id,
-                            onlinestatus: res.data.data.camera.onlinestatus,
-                            socketmei: res.data.data.board.length > 0 ? res.data.data.board[0].imei : "无",
-                        }, function () {
-                            if (this.state.onlinestatus === true) {
-                                this.setState({
-                                    cameraonline: 'block'
-                                })
-                            }
-                            if (this.state.onlinestatus === false) {
-                                this.setState({
-                                    uncameraonline: 'block'
-                                })
-                            }
-                        })
-                    }
-                })
-                localStorage.setItem("authorization", res.headers.authorization);
-            } else {
-                Toast.fail(res.data.data);
-            }
-        })
+        if (!this.state.phone) {
+            Toast.fail('请输入手机号');
+        } else if (!this.state.codenum) {
+            Toast.fail('请输入验证码');
+        } else {
+            mobilelogin([
+                this.state.phone,
+                this.state.codenum,
+            ]).then(res => {
+                if (res.data && res.data.message === "success") {
+                    Toast.success('验证成功');
+                    this.setState({
+                        yanzvisible: false,
+                    })
+                    QRcodeInfo([
+                        localStorage.getItem('erweimacode'),
+                        localStorage.getItem('explaintime'),
+                        localStorage.getItem('explaintime'),
+                    ]).then(res => {
+                        if (res.data && res.data.message === "success") {
+                            this.setState({
+                                sitename: res.data.data.site.sitename,
+                                roomname: res.data.data.room.name,
+                                cameraid: res.data.data.camera.id,
+                                onlinestatus: res.data.data.camera.onlinestatus,
+                                socketmei: res.data.data.board.length > 0 ? res.data.data.board[0].imei : "无",
+                            }, function () {
+                                if (this.state.onlinestatus === true) {
+                                    this.setState({
+                                        cameraonline: 'block'
+                                    })
+                                }
+                                if (this.state.onlinestatus === false) {
+                                    this.setState({
+                                        uncameraonline: 'block'
+                                    })
+                                }
+                            })
+                        }
+                    })
+                    localStorage.setItem("authorization", res.headers.authorization);
+                } else {
+                    Toast.fail(res.data.data);
+                }
+            })
+        }
     }
 
     //取消添加
