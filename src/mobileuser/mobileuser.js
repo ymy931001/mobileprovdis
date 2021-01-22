@@ -233,7 +233,7 @@ export default class Devicedisplay extends Component {
                     if (text === 0 || text === 2 || text === 3) {
                         return (
                             <div>
-                                <span style={{ color: 'red' }}>未消毒</span>
+                                <span style={{ color: 'red' }}>未达标</span>
                             </div>
                         )
                     }
