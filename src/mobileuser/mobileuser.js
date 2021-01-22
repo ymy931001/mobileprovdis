@@ -230,7 +230,7 @@ export default class Devicedisplay extends Component {
                 title: "结果",
                 dataIndex: "result",
                 render: (text, record, index) => {
-                    if (text === 0) {
+                    if (text === 0 || text === 2 || text === 3) {
                         return (
                             <div>
                                 <span style={{ color: 'red' }}>未消毒</span>
@@ -249,6 +249,13 @@ export default class Devicedisplay extends Component {
                             return (
                                 <div>
                                     <span style={{ color: 'blue' }}>未达标</span>
+                                </div>
+                            )
+                        }
+                        if (text === -1) {
+                            return (
+                                <div>
+                                    <span style={{ color: 'red' }}>未达标</span>
                                 </div>
                             )
                         }
@@ -351,7 +358,7 @@ export default class Devicedisplay extends Component {
                             消毒记录
                             </div>
                             <Button type="primary" onClick={this.todaylist} style={{ float: 'right' }}>
-                                    今日
+                                今日
                                 </Button>
                         </div>
                         <div className="content">
@@ -392,8 +399,8 @@ export default class Devicedisplay extends Component {
                                     dataSource={this.state.cuplist}
                                     components={components}
                                     columns={cupcolumns}
-                                    // pagination={this.state.listpage}
-                                    // pagination={false}
+                                // pagination={this.state.listpage}
+                                // pagination={false}
                                 />
                             </div>
                         </div>

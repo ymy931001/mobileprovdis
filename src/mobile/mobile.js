@@ -182,7 +182,7 @@ export default class Devicedisplay extends Component {
     lookexplain = (text, record, index) => {
         console.log(record)
         localStorage.setItem("explainid", record.id)
-        localStorage.setItem("explaintime", record.date.substring(0,10))
+        localStorage.setItem("explaintime", record.date.substring(0, 10))
         localStorage.setItem("explainmessage", record.message)
         localStorage.setItem("roomname", record.roomName)
     }
@@ -246,7 +246,7 @@ export default class Devicedisplay extends Component {
                 title: "结果",
                 dataIndex: "result",
                 render: (text, record, index) => {
-                    if (text === 0) {
+                    if (text === 0 || text === 2 || text === 3) {
                         return (
                             <div>
                                 <span style={{ color: 'red' }}>未消毒</span>
@@ -265,6 +265,13 @@ export default class Devicedisplay extends Component {
                             return (
                                 <div>
                                     <span style={{ color: 'blue' }}>未达标</span>
+                                </div>
+                            )
+                        }
+                        if (text === -1) {
+                            return (
+                                <div>
+                                    <span style={{ color: 'red' }}>未达标</span>
                                 </div>
                             )
                         }
