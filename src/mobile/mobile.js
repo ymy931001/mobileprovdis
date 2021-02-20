@@ -253,6 +253,13 @@ export default class Devicedisplay extends Component {
                             </div>
                         )
                     }
+                    if (text === -1 || text === -2 || text === -3) {
+                        return (
+                            <div>
+                                <span style={{ color: 'red' }}>设备离线</span>
+                            </div>
+                        )
+                    }
                     if (text === 1) {
                         return (
                             <div>
@@ -268,10 +275,10 @@ export default class Devicedisplay extends Component {
                                 </div>
                             )
                         }
-                        if (text === -1) {
+                        if (text === -1 || text === -2 || text === -3) {
                             return (
                                 <div>
-                                    <span style={{ color: 'red' }}>未达标</span>
+                                    <span style={{ color: 'red' }}>设备离线</span>
                                 </div>
                             )
                         }
